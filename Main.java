@@ -50,13 +50,18 @@ public class Main {
                     nimGame.remove(sticks,scanner);
 
                     if(nimGame.isWinner(sticks)){
-                        System.out.println("Player1 is the Winner");
+                        System.out.println("Player2 is the Winner");
                         break;
                     }
 
                     view.displaySticks(sticks);
                     System.out.println("Player2's turn:");
                     nimGame.remove(sticks,scanner);
+
+                    if(nimGame.isWinner(sticks)){
+                        System.out.println("Player1 is the Winner");
+                        break;
+                    }
                 }
             }else{
                 break;
